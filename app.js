@@ -1,10 +1,12 @@
-const express = require('express');
-const app = express();
+var express = require('express');
+var app = express();
 
-app.get('/', (req, res) => {
-    res.send("Welcome to the home page");
+app.get('/', function (req, res) {
+  res.send('Hello World!');
 });
 
-app.listen(3000, () => {
-    console.log("Wazzap")
+const myPort = process.env.PORT || 8081;
+
+app.listen(myPort, function () {
+  console.log('Example app listening on port 8081!');
 });
